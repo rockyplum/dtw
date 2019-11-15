@@ -12,7 +12,6 @@ pool:
 steps:
 - script: |
     ls 
-    ls ../
-    cmake -S ./ -B build
+    cmake ./
     make
   displayName: 'make'
