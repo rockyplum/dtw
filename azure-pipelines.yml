@@ -17,7 +17,7 @@ steps:
     mkdir build
     echo -----
     pwd
-    cmake
+    cmake ./
     echo -----
     ls
     make
