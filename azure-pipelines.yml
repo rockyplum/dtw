@@ -17,9 +17,8 @@ steps:
     mkdir build
     echo -----
     pwd
-    cmake -S ./ -B build
+    cmake
     echo -----
-    cd build
     ls
     make
   displayName: 'make'
