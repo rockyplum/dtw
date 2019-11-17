@@ -13,7 +13,7 @@ steps:
 - script: |
     ls 
     mkdir build
-    cmake ./ -B build
+    cmake -S ./ -B build
     cd build
     make
   displayName: 'make'
