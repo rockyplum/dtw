@@ -11,9 +11,14 @@ pool:
 
 steps:
 - script: |
-    ls 
+    ls
+    echo -----
     mkdir build
+    echo -----
+    pwd
     cmake -S ./ -B build
+    echo -----
     cd build
+    ls
     make
   displayName: 'make'
