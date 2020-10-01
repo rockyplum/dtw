@@ -29,9 +29,9 @@ else()
     include_directories(include)
     ## Make the library
     add_library(${PROJECT_NAME} SHARED src/dtw.cpp)
-    target_link_libraries(${PROJECT_NAME} rt)
+    #target_link_libraries(${PROJECT_NAME})
     ## Make the simple example/test
     add_executable(dtw_example src/main.cpp)
-    target_link_libraries(dtw_example ${PROJECT_NAME} rt)
+    target_link_libraries(dtw_example ${PROJECT_NAME})
 endif()
 
