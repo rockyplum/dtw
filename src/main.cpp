@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <stdexcept>
 #include <dtw/dtw.h>
+#include <time.h>
 
 double euclidean_distance(std::vector<double> P1, std::vector<double> P2)
 {
