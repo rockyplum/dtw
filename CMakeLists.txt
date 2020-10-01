@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(dtw)
 
+set(CMAKE_CXX_STANDARD 14)
+
 ## Check if we are an ROS system first
 find_package(catkin)
 if(catkin_FOUND)
@@ -10,8 +12,6 @@ if(catkin_FOUND)
     ## Make the catkin_package
     catkin_package(INCLUDE_DIRS include LIBRARIES ${PROJECT_NAME} CATKIN_DEPENDS roscpp)
     ## Set compiler flags
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
-    set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -O3")
     ## Set include path
     include_directories(include ${catkin_INCLUDE_DIRS})
     ## Make the library
@@ -25,8 +25,6 @@ if(catkin_FOUND)
 else()
     message(STATUS "Catkin not found. Building standard C++ library")
     ## Set compiler flags
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
-    set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -O3")
     ## Set include path
     include_directories(include)
     ## Make the library
